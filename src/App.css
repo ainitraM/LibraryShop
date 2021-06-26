@@ -2,37 +2,59 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Nav-Wrapper {
+  position: fixed; /* Set the navbar to fixed position */
+  overflow: hidden;
+  width: 100%;
+  background-color: darkslategrey;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  z-index: 999;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.Nav-Container {
+  display:flex;
+  position: sticky;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 60px;
+}
+
+.Cart {
+  display: flex;
+  width: 42px;
+  align-items: center;
+}
+
+img {
+  filter: invert(94%) sepia(93%) saturate(3%) hue-rotate(252deg) brightness(105%) contrast(100%);
+  align-self: center;
+  transition: all .2s ease-in-out;
+}
+
+img:hover, h1:hover {
+  transform: scale(1.07);
+}
+
+.Brand {
+  align-self: center;
+  align-items: flex-start;
+  text-decoration: none;
+}
+
+h1 {
+  transition: all .2s ease-in-out;
+  font-size: 37px;
+  font-family: 'Luckiest Guy';
   color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
