@@ -10,7 +10,7 @@ const Navbar = ()=>{
                 <Link to="/" className="Brand">
                     <h1>WelcomeLibarary 📚</h1>
                 </Link>
-                <Link to="/cart"><img srcset={logo} className="Cart"></img></Link>
+                <Link to="/cart"><img srcSet={logo} className="Cart"></img></Link>
             </div>
         </div>
     )
