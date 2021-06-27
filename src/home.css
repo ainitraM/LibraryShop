@@ -1,0 +1,10 @@
+.BookTable {
+    display: block;
+    position: absolute;
+    margin-top: 80px;
+}
+
+.table-th img {
+    width: auto;
+    height: 200px;
+}

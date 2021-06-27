@@ -4,7 +4,6 @@
 
 .Nav-Wrapper {
   position: fixed; /* Set the navbar to fixed position */
-  margin-top: 15%;
   overflow: hidden;
   width: 100%;
   background-color: darkslategrey;

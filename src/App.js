@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './App.css';
 import Navbar from "./Navbar.js";
-import Home from "./Home.js"
+import Home from "./Home.js";
+import './index.css';
 
 class App extends PureComponent {
     render() {
@@ -10,9 +11,9 @@ class App extends PureComponent {
             <BrowserRouter>
                 <div className="App">
                     <Navbar/>
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                    </Switch>
+                    <Route exact path="/" component={Home}/>
+                </div>
+                <div>
                 </div>
             </BrowserRouter>
         );

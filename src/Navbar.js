@@ -8,9 +8,9 @@ const Navbar = ()=>{
         <div className="Nav-Wrapper">
             <div className="Nav-Container">
                 <Link to="/" className="Brand">
-                    <h1>WelcomeLibarary 📚</h1>
+                    <h1>WelcomeLibrary 📚</h1>
                 </Link>
-                <Link to="/cart"><img srcSet={logo} className="Cart"></img></Link>
+                <Link to="/cart"><img src={logo} className="Cart" alt="Go to your cart." ></img></Link>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { fetchBooks } from "./reducers/BookReducer.js"
+import "./home.css";
 
 class Home extends PureComponent {
 
@@ -22,14 +23,26 @@ class Home extends PureComponent {
             return null;
         }
         return (
-            <ul>
-                {this.props.items.data.map((item) => (
-                    <li key={item.id}>
-                        {item.id}
-                    </li>
+            <div className="BookTable">
+                <table>
+                    <thead className="tableThead">
+                    <tr>
+                        <th className="table__th">ID</th>
+                        <th className="table__th">Picture</th>
+                        <th className="table__th">Title</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {this.props.items.data.map((item) => (
+                        <tr>
+                            <th className="table-th">{item.id}</th>
+                            <th className="table-th"><img src={item.cover_url}></img></th>
+                            <th className="table-th">{item.title}</th>
+                        </tr>
                     ))}
-                }}
-            </ul>
+                    </tbody>
+                </table>
+            </div>
         )
     }
 }
