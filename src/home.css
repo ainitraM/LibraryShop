@@ -28,7 +28,6 @@
 
 .add-button {
     visibility: hidden;
-    position: absolute;
     z-index: 10;
     background-color: white;
     transition: all 0.2s ease-in 0s;
@@ -55,6 +54,7 @@
     filter: invert(38%) sepia(99%) saturate(948%) hue-rotate(91deg) brightness(98%) contrast(99%);
     height: 42px;
     width: 42px;
+    cursor: pointer;
 }
 
 .book-wrapper {
@@ -70,7 +70,7 @@
     position: relative;
     display:block;
     margin: auto;
-    padding-top: 25px;
+    padding-top: -25px;
 }
 
 .book-image img {

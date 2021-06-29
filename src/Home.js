@@ -26,9 +26,9 @@ class Home extends PureComponent {
         return (
             <div className="BookTable">
                     {this.props.items.data.map((item) => (
-                    <div className="book-container">
+                    <div className="book-container" title="Add to cart">
                         <div className="add-button">
-                            <img className="cart-add" src={cartAdd}></img>
+                            <input type="image" className="cart-add" src={cartAdd} onClick={() => alert('click')}></input>
                         </div>
                         <div className="book-wrapper">
                             <div className="book-image"><img src={item.cover_url} alt={item.title}></img></div>
