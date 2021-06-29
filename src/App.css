@@ -28,15 +28,12 @@
   display: flex;
   width: 42px;
   align-items: center;
-}
-
-img {
   filter: invert(94%) sepia(93%) saturate(3%) hue-rotate(252deg) brightness(105%) contrast(100%);
   align-self: center;
   transition: all .2s ease-in-out;
 }
 
-img:hover, h1:hover {
+.Cart:hover, h1:hover {
   transform: scale(1.07);
 }
 

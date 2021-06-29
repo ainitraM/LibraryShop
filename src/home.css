@@ -1,10 +1,108 @@
 .BookTable {
-    display: block;
+    display: flex;
     position: absolute;
-    margin-top: 80px;
+    margin-top: 100px;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-.table-th img {
-    width: auto;
-    height: 200px;
+.book-container {
+    background-color: white;
+    min-width: 250px;
+    min-height: auto;
+    display: flex;
+    flex-flow: column;
+    flex-basis: 19%;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.book-container:hover {
+    border-color: rgb(98, 112, 123);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 21px;
+}
+
+.add-button {
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    transition: all 0.2s ease-in 0s;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-container:hover > .add-button {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+    transform: translateY(-20px);
+}
+
+.book-container:hover > .cart-add {
+    height: 46px;
+    width: 46px;
+}
+
+.cart-add {
+    filter: invert(38%) sepia(99%) saturate(948%) hue-rotate(91deg) brightness(98%) contrast(99%);
+    height: 42px;
+    width: 42px;
+}
+
+.book-wrapper {
+    display: flex;
+    flex-flow: column;
+    width: 70%;
+    height: 100%;
+}
+
+.book-image {
+    max-width:90%;
+    height:auto;
+    position: relative;
+    display:block;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.book-image img {
+    max-width:100% !important;
+    height:auto;
+    border: 1px solid #eeeeee;
+}
+
+.book-info-wrapper {
+    display: flex;
+    flex-flow: column;
+    font-size: 15px;
+    margin: auto;
+    padding: 10px;
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 17px;
+    margin: auto 0;
+}
+
+.book-author {
+    font-size: 12px;
+    margin: 0;
+}
+
+.book-pages {
+    display: flex;
+    font-weight: lighter;
+    font-size: 15px;
+    font-style: italic;
+    justify-content: right;
+    margin: 0;
 }

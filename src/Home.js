@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { fetchBooks } from "./reducers/BookReducer.js"
 import "./home.css";
+import cartAdd from './plus-symbol-in-a-rounded-black-square.svg';
 
 class Home extends PureComponent {
 
@@ -24,24 +25,21 @@ class Home extends PureComponent {
         }
         return (
             <div className="BookTable">
-                <table>
-                    <thead className="tableThead">
-                    <tr>
-                        <th className="table__th">ID</th>
-                        <th className="table__th">Picture</th>
-                        <th className="table__th">Title</th>
-                    </tr>
-                    </thead>
-                    <tbody>
                     {this.props.items.data.map((item) => (
-                        <tr>
-                            <th className="table-th">{item.id}</th>
-                            <th className="table-th"><img src={item.cover_url}></img></th>
-                            <th className="table-th">{item.title}</th>
-                        </tr>
+                    <div className="book-container">
+                        <div className="add-button">
+                            <img className="cart-add" src={cartAdd}></img>
+                        </div>
+                        <div className="book-wrapper">
+                            <div className="book-image"><img src={item.cover_url} alt={item.title}></img></div>
+                            <div className="book-info-wrapper">
+                                <p className="book-title">{item.title}</p>
+                                <p className="book-author">{item.author}</p>
+                                <p className="book-pages">p. {item.pages}</p>
+                            </div>
+                        </div>
+                    </div>
                     ))}
-                    </tbody>
-                </table>
             </div>
         )
     }
