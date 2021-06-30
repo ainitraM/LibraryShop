@@ -8,10 +8,6 @@ import { addToCart } from './reducers/Cart.js';
 
 class Home extends PureComponent {
 
-    componentDidMount() {
-        this.props.fetchBooks("http://localhost:3001/api/book?page=1");
-    }
-
     handleAddToCart = (id) => {
         console.log(id);
         this.props.addToCart(id);
